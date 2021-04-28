@@ -1,0 +1,536 @@
+Analysis & Synthesis report for perifericos_niosii
+Wed Apr 28 16:27:19 2021
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: Top-level Entity: |avalon_UART
+ 15. Parameter Settings for User Entity Instance: UART:UART
+ 16. Parameter Settings for User Entity Instance: UART:UART|uart_rx:UART_RX_INST
+ 17. Parameter Settings for User Entity Instance: UART:UART|uart_tx:UART_TX_INST
+ 18. Parameter Settings for User Entity Instance: avalon_mm_master:masterUART
+ 19. Port Connectivity Checks: "avalon_mm_master:masterUART"
+ 20. Port Connectivity Checks: "UART:UART|uart_tx:UART_TX_INST"
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
+ 24. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Apr 28 16:27:19 2021       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                      ; perifericos_niosii                          ;
+; Top-level Entity Name              ; avalon_UART                                 ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 234                                         ;
+;     Total combinational functions  ; 191                                         ;
+;     Dedicated logic registers      ; 108                                         ;
+; Total registers                    ; 108                                         ;
+; Total pins                         ; 107                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                                      ; avalon_UART        ; perifericos_niosii ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                              ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                                        ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                            ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------+---------+
+; avalon_mm_master.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_mm_master.sv ;         ;
+; UART.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/CHS/UART/UART.sv             ;         ;
+; uart_rx.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/CHS/UART/uart_rx.sv          ;         ;
+; uart_tx.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/CHS/UART/uart_tx.sv          ;         ;
+; avalon_UART.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv      ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 234       ;
+;                                             ;           ;
+; Total combinational functions               ; 191       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 131       ;
+;     -- 3 input functions                    ; 37        ;
+;     -- <=2 input functions                  ; 23        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 175       ;
+;     -- arithmetic mode                      ; 16        ;
+;                                             ;           ;
+; Total registers                             ; 108       ;
+;     -- Dedicated logic registers            ; 108       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 107       ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; CLK~input ;
+; Maximum fan-out                             ; 108       ;
+; Total fan-out                               ; 1131      ;
+; Average fan-out                             ; 2.20      ;
++---------------------------------------------+-----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                         ;
++----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+------------------+--------------+
+; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                         ; Entity Name      ; Library Name ;
++----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+------------------+--------------+
+; |avalon_UART                     ; 191 (5)             ; 108 (2)                   ; 0           ; 0            ; 0       ; 0         ; 107  ; 0            ; |avalon_UART                                ; avalon_UART      ; work         ;
+;    |UART:UART|                   ; 142 (48)            ; 104 (52)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avalon_UART|UART:UART                      ; UART             ; work         ;
+;       |uart_rx:UART_RX_INST|     ; 55 (55)             ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avalon_UART|UART:UART|uart_rx:UART_RX_INST ; uart_rx          ; work         ;
+;       |uart_tx:UART_TX_INST|     ; 39 (39)             ; 25 (25)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avalon_UART|UART:UART|uart_tx:UART_TX_INST ; uart_tx          ; work         ;
+;    |avalon_mm_master:masterUART| ; 44 (44)             ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avalon_UART|avalon_mm_master:masterUART    ; avalon_mm_master ; work         ;
++----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; flagTx_aux                                         ; GND                 ; yes                    ;
+; Number of user-specified and inferred latches = 1  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                       ;
++-------------------------------------------------+----------------------------------------+
+; Register name                                   ; Reason for Removal                     ;
++-------------------------------------------------+----------------------------------------+
+; state[2..31]                                    ; Stuck at GND due to stuck port data_in ;
+; avalon_mm_master:masterUART|state[2..31]        ; Stuck at GND due to stuck port data_in ;
+; UART:UART|state[3..31]                          ; Stuck at GND due to stuck port data_in ;
+; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[3..31] ; Stuck at GND due to stuck port data_in ;
+; UART:UART|uart_rx:UART_RX_INST|r_SM_Main[3..31] ; Stuck at GND due to stuck port data_in ;
+; UART:UART|WrAux                                 ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 148         ;                                        ;
++-------------------------------------------------+----------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                       ;
++---------------------------------------+---------------------------+-----------------------------------------------+
+; Register name                         ; Reason for Removal        ; Registers Removed due to This Register        ;
++---------------------------------------+---------------------------+-----------------------------------------------+
+; state[31]                             ; Stuck at GND              ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[3],  ;
+;                                       ; due to stuck port data_in ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[4],  ;
+;                                       ;                           ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[5],  ;
+;                                       ;                           ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[6],  ;
+;                                       ;                           ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[7],  ;
+;                                       ;                           ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[8],  ;
+;                                       ;                           ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[9],  ;
+;                                       ;                           ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[10], ;
+;                                       ;                           ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[11], ;
+;                                       ;                           ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[12], ;
+;                                       ;                           ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[13], ;
+;                                       ;                           ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[14], ;
+;                                       ;                           ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[15], ;
+;                                       ;                           ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[16], ;
+;                                       ;                           ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[17], ;
+;                                       ;                           ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[18], ;
+;                                       ;                           ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[19], ;
+;                                       ;                           ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[20]  ;
+; avalon_mm_master:masterUART|state[31] ; Stuck at GND              ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[22], ;
+;                                       ; due to stuck port data_in ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[23], ;
+;                                       ;                           ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[24]  ;
++---------------------------------------+---------------------------+-----------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 108   ;
+; Number of registers using Synchronous Clear  ; 18    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 4     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 68    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------+
+; Inverted Register Statistics                         ;
++--------------------------------------------+---------+
+; Inverted Register                          ; Fan out ;
++--------------------------------------------+---------+
+; UART:UART|uart_rx:UART_RX_INST|r_Rx_Data   ; 11      ;
+; UART:UART|uart_rx:UART_RX_INST|r_Rx_Data_R ; 1       ;
+; Total number of inverted registers = 2     ;         ;
++--------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |avalon_UART|UART:UART|data_to_recieve[4][1]                 ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |avalon_UART|UART:UART|data_to_recieve[3][7]                 ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |avalon_UART|UART:UART|data_to_recieve[2][0]                 ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |avalon_UART|UART:UART|data_to_recieve[1][5]                 ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |avalon_UART|UART:UART|data_to_recieve[0][7]                 ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |avalon_UART|UART:UART|uart_tx:UART_TX_INST|r_Clock_Count[4] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |avalon_UART|UART:UART|data_tx_aux[2]                        ;
+; 7:1                ; 9 bits    ; 36 LEs        ; 9 LEs                ; 27 LEs                 ; Yes        ; |avalon_UART|UART:UART|uart_rx:UART_RX_INST|r_Clock_Count[7] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |avalon_UART|avalon_mm_master:masterUART|WRITEDATA[0]        ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |avalon_UART|UART:UART|indexCount                            ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |avalon_UART|UART:UART|uart_tx:UART_TX_INST|r_Bit_Index      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |avalon_UART|UART:UART|uart_rx:UART_RX_INST|r_Bit_Index      ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |avalon_UART|data_to_write[3]                                ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |avalon_UART|avalon_mm_master:masterUART|ADDRESS[3]          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |avalon_UART ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; c_CLKS_PER_BIT ; 434   ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART:UART ;
++----------------+-------+-------------------------------+
+; Parameter Name ; Value ; Type                          ;
++----------------+-------+-------------------------------+
+; c_CLKS_PER_BIT ; 434   ; Signed Integer                ;
++----------------+-------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART:UART|uart_rx:UART_RX_INST ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; CLKS_PER_BIT   ; 434   ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART:UART|uart_tx:UART_TX_INST ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; CLKS_PER_BIT   ; 434   ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: avalon_mm_master:masterUART ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; width          ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "avalon_mm_master:masterUART"    ;
++--------------------------+-------+----------+--------------+
+; Port                     ; Type  ; Severity ; Details      ;
++--------------------------+-------+----------+--------------+
+; address_to_access[31..4] ; Input ; Info     ; Stuck at GND ;
+; address_to_access[1..0]  ; Input ; Info     ; Stuck at GND ;
++--------------------------+-------+----------+--------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "UART:UART|uart_tx:UART_TX_INST" ;
++-------------+--------+----------+--------------------------+
+; Port        ; Type   ; Severity ; Details                  ;
++-------------+--------+----------+--------------------------+
+; o_Tx_Active ; Output ; Info     ; Explicitly unconnected   ;
++-------------+--------+----------+--------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 107                         ;
+; cycloneiii_ff         ; 108                         ;
+;     CLR               ; 4                           ;
+;     ENA               ; 50                          ;
+;     ENA SCLR          ; 18                          ;
+;     plain             ; 36                          ;
+; cycloneiii_lcell_comb ; 192                         ;
+;     arith             ; 16                          ;
+;         2 data inputs ; 16                          ;
+;     normal            ; 176                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 37                          ;
+;         4 data inputs ; 131                         ;
+;                       ;                             ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 2.49                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Wed Apr 28 16:27:04 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off perifericos_niosii -c perifericos_niosii
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file avalon_mm_master.sv
+    Info (12023): Found entity 1: avalon_mm_master File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_mm_master.sv Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file uart.sv
+    Info (12023): Found entity 1: UART File: C:/Users/Pablo/Desktop/TFG/CHS/UART/UART.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file uart_rx.sv
+    Info (12023): Found entity 1: uart_rx File: C:/Users/Pablo/Desktop/TFG/CHS/UART/uart_rx.sv Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file uart_tx.sv
+    Info (12023): Found entity 1: uart_tx File: C:/Users/Pablo/Desktop/TFG/CHS/UART/uart_tx.sv Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file avalon_uart.sv
+    Info (12023): Found entity 1: avalon_UART File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 1
+Info (12127): Elaborating entity "avalon_UART" for the top level hierarchy
+Warning (10235): Verilog HDL Always Construct warning at avalon_UART.sv(120): variable "RST" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 120
+Warning (10235): Verilog HDL Always Construct warning at avalon_UART.sv(159): variable "dataRecieved" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 159
+Warning (10235): Verilog HDL Always Construct warning at avalon_UART.sv(176): variable "flagTx_aux" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 176
+Warning (10235): Verilog HDL Always Construct warning at avalon_UART.sv(189): variable "dataRecieved" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 189
+Warning (10240): Verilog HDL Always Construct warning at avalon_UART.sv(118): inferring latch(es) for variable "flagTx_aux", which holds its previous value in one or more paths through the always construct File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 118
+Info (10041): Inferred latch for "flagTx_aux" at avalon_UART.sv(132) File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 132
+Info (12128): Elaborating entity "UART" for hierarchy "UART:UART" File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 51
+Warning (10230): Verilog HDL assignment warning at UART.sv(98): truncated value with size 32 to match size of target (4) File: C:/Users/Pablo/Desktop/TFG/CHS/UART/UART.sv Line: 98
+Warning (10230): Verilog HDL assignment warning at UART.sv(137): truncated value with size 32 to match size of target (4) File: C:/Users/Pablo/Desktop/TFG/CHS/UART/UART.sv Line: 137
+Info (12128): Elaborating entity "uart_rx" for hierarchy "UART:UART|uart_rx:UART_RX_INST" File: C:/Users/Pablo/Desktop/TFG/CHS/UART/UART.sv Line: 40
+Warning (10230): Verilog HDL assignment warning at uart_rx.sv(75): truncated value with size 32 to match size of target (9) File: C:/Users/Pablo/Desktop/TFG/CHS/UART/uart_rx.sv Line: 75
+Warning (10230): Verilog HDL assignment warning at uart_rx.sv(86): truncated value with size 32 to match size of target (9) File: C:/Users/Pablo/Desktop/TFG/CHS/UART/uart_rx.sv Line: 86
+Warning (10230): Verilog HDL assignment warning at uart_rx.sv(97): truncated value with size 32 to match size of target (4) File: C:/Users/Pablo/Desktop/TFG/CHS/UART/uart_rx.sv Line: 97
+Warning (10230): Verilog HDL assignment warning at uart_rx.sv(115): truncated value with size 32 to match size of target (9) File: C:/Users/Pablo/Desktop/TFG/CHS/UART/uart_rx.sv Line: 115
+Info (12128): Elaborating entity "uart_tx" for hierarchy "UART:UART|uart_tx:UART_TX_INST" File: C:/Users/Pablo/Desktop/TFG/CHS/UART/UART.sv Line: 49
+Warning (10230): Verilog HDL assignment warning at uart_tx.sv(62): truncated value with size 32 to match size of target (9) File: C:/Users/Pablo/Desktop/TFG/CHS/UART/uart_tx.sv Line: 62
+Warning (10230): Verilog HDL assignment warning at uart_tx.sv(81): truncated value with size 32 to match size of target (9) File: C:/Users/Pablo/Desktop/TFG/CHS/UART/uart_tx.sv Line: 81
+Warning (10230): Verilog HDL assignment warning at uart_tx.sv(91): truncated value with size 32 to match size of target (3) File: C:/Users/Pablo/Desktop/TFG/CHS/UART/uart_tx.sv Line: 91
+Warning (10230): Verilog HDL assignment warning at uart_tx.sv(111): truncated value with size 32 to match size of target (9) File: C:/Users/Pablo/Desktop/TFG/CHS/UART/uart_tx.sv Line: 111
+Info (12128): Elaborating entity "avalon_mm_master" for hierarchy "avalon_mm_master:masterUART" File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 71
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "ADDRESS[0]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[1]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[4]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[5]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[6]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[7]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[8]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[9]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[10]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[11]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[12]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[13]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[14]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[15]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[16]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[17]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[18]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[19]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[20]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[21]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[22]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[23]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[24]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[25]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[26]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[27]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[28]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[29]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[30]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[31]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/Pablo/Desktop/TFG/CHS/UART/output_files/perifericos_niosii.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 344 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 37 input pins
+    Info (21059): Implemented 70 output pins
+    Info (21061): Implemented 237 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 47 warnings
+    Info: Peak virtual memory: 4769 megabytes
+    Info: Processing ended: Wed Apr 28 16:27:19 2021
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:30
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/Pablo/Desktop/TFG/CHS/UART/output_files/perifericos_niosii.map.smsg.
+
+

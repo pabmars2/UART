@@ -1,0 +1,54 @@
+# system info UART_tb on 2021.04.05.14:41:25
+system_info:
+name,value
+DEVICE,EP4CE115F29C7
+DEVICE_FAMILY,Cyclone IV E
+GENERATION_ID,1617626475
+#
+#
+# Files generated for UART_tb on 2021.04.05.14:41:25
+files:
+filepath,kind,attributes,module,is_top
+UART/testbench/UART_tb/simulation/UART_tb.v,VERILOG,,UART_tb,true
+UART/testbench/UART_tb/simulation/submodules/UART.v,VERILOG,,UART,false
+UART/testbench/UART_tb/simulation/submodules/verbosity_pkg.sv,SYSTEM_VERILOG, COMMON_SYSTEMVERILOG_PACKAGE=avalon_vip_verbosity_pkg,altera_conduit_bfm,false
+UART/testbench/UART_tb/simulation/submodules/altera_conduit_bfm.sv,SYSTEM_VERILOG,,altera_conduit_bfm,false
+UART/testbench/UART_tb/simulation/submodules/verbosity_pkg.sv,SYSTEM_VERILOG, COMMON_SYSTEMVERILOG_PACKAGE=avalon_vip_verbosity_pkg,altera_conduit_bfm_0002,false
+UART/testbench/UART_tb/simulation/submodules/altera_conduit_bfm_0002.sv,SYSTEM_VERILOG,,altera_conduit_bfm_0002,false
+UART/testbench/UART_tb/simulation/submodules/verbosity_pkg.sv,SYSTEM_VERILOG, COMMON_SYSTEMVERILOG_PACKAGE=avalon_vip_verbosity_pkg,altera_conduit_bfm_0003,false
+UART/testbench/UART_tb/simulation/submodules/altera_conduit_bfm_0003.sv,SYSTEM_VERILOG,,altera_conduit_bfm_0003,false
+UART/testbench/UART_tb/simulation/submodules/verbosity_pkg.sv,SYSTEM_VERILOG, COMMON_SYSTEMVERILOG_PACKAGE=avalon_vip_verbosity_pkg,altera_avalon_clock_source,false
+UART/testbench/UART_tb/simulation/submodules/altera_avalon_clock_source.sv,SYSTEM_VERILOG,,altera_avalon_clock_source,false
+UART/testbench/UART_tb/simulation/submodules/verbosity_pkg.sv,SYSTEM_VERILOG, COMMON_SYSTEMVERILOG_PACKAGE=avalon_vip_verbosity_pkg,altera_avalon_reset_source,false
+UART/testbench/UART_tb/simulation/submodules/altera_avalon_reset_source.sv,SYSTEM_VERILOG,,altera_avalon_reset_source,false
+UART/testbench/UART_tb/simulation/submodules/avalon_UART.sv,SYSTEM_VERILOG,,avalon_UART,false
+UART/testbench/UART_tb/simulation/submodules/UART.sv,SYSTEM_VERILOG,,avalon_UART,false
+UART/testbench/UART_tb/simulation/submodules/avalon_mm_master.sv,SYSTEM_VERILOG,,avalon_UART,false
+UART/testbench/UART_tb/simulation/submodules/uart_rx.sv,SYSTEM_VERILOG,,avalon_UART,false
+UART/testbench/UART_tb/simulation/submodules/uart_tx.sv,SYSTEM_VERILOG,,avalon_UART,false
+UART/testbench/UART_tb/simulation/submodules/avalon_timer.v,VERILOG,,avalon_timer,false
+UART/testbench/UART_tb/simulation/submodules/avalon_slave_MM_interface.v,VERILOG,,avalon_timer,false
+UART/testbench/UART_tb/simulation/submodules/timer.v,VERILOG,,avalon_timer,false
+UART/testbench/UART_tb/simulation/submodules/UART_mm_interconnect_0.v,VERILOG,,UART_mm_interconnect_0,false
+UART/testbench/UART_tb/simulation/submodules/altera_reset_controller.v,VERILOG,,altera_reset_controller,false
+UART/testbench/UART_tb/simulation/submodules/altera_reset_synchronizer.v,VERILOG,,altera_reset_controller,false
+UART/testbench/UART_tb/simulation/submodules/altera_reset_controller.sdc,SDC,,altera_reset_controller,false
+UART/testbench/UART_tb/simulation/submodules/altera_merlin_master_translator.sv,SYSTEM_VERILOG,,altera_merlin_master_translator,false
+UART/testbench/UART_tb/simulation/submodules/altera_merlin_slave_translator.sv,SYSTEM_VERILOG,,altera_merlin_slave_translator,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+UART_tb.UART_inst,UART
+UART_tb.UART_inst.AvalonMasterUART_0,avalon_UART
+UART_tb.UART_inst.avalon_timer_0,avalon_timer
+UART_tb.UART_inst.mm_interconnect_0,UART_mm_interconnect_0
+UART_tb.UART_inst.mm_interconnect_0.AvalonMasterUART_0_avalon_master_translator,altera_merlin_master_translator
+UART_tb.UART_inst.mm_interconnect_0.avalon_timer_0_avalon_slave_translator,altera_merlin_slave_translator
+UART_tb.UART_inst.rst_controller,altera_reset_controller
+UART_tb.UART_inst.rst_controller_001,altera_reset_controller
+UART_tb.UART_inst_avalon_timer_0_external_interface_bfm,altera_conduit_bfm
+UART_tb.UART_inst_avalonmasteruart_0_control_bfm,altera_conduit_bfm_0002
+UART_tb.UART_inst_avalonmasteruart_0_rs232_bfm,altera_conduit_bfm_0003
+UART_tb.UART_inst_clk_bfm,altera_avalon_clock_source
+UART_tb.UART_inst_reset_bfm,altera_avalon_reset_source

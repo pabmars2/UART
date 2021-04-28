@@ -1,0 +1,14 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst avalon_timer_qsys2 -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst avalon_timer_qsys2.mm_master_bfm_0 -pg 1 -lvl 2 -y 30
+preplace inst avalon_timer_qsys2.clk_0 -pg 1 -lvl 1 -y 30
+preplace inst avalon_timer_qsys2.avalon_timer_0 -pg 1 -lvl 3 -y 70
+preplace netloc FAN_OUT<net_container>avalon_timer_qsys2</net_container>(MASTER)clk_0.clk,(SLAVE)avalon_timer_0.clock_sink,(SLAVE)mm_master_bfm_0.clk) 1 1 2 430 100 NJ
+preplace netloc EXPORT<net_container>avalon_timer_qsys2</net_container>(SLAVE)avalon_timer_qsys2.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>avalon_timer_qsys2</net_container>(SLAVE)mm_master_bfm_0.clk_reset,(SLAVE)avalon_timer_0.reset_sink,(MASTER)clk_0.clk_reset) 1 1 2 410 160 NJ
+preplace netloc EXPORT<net_container>avalon_timer_qsys2</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)avalon_timer_qsys2.reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>avalon_timer_qsys2</net_container>(SLAVE)avalon_timer_qsys2.avalon_timer_0_external_interface,(SLAVE)avalon_timer_0.external_interface) 1 0 3 NJ 120 NJ 120 NJ
+preplace netloc POINT_TO_POINT<net_container>avalon_timer_qsys2</net_container>(SLAVE)avalon_timer_0.avalon_slave,(MASTER)mm_master_bfm_0.m0) 1 2 1 580
+levelinfo -pg 1 0 200 770
+levelinfo -hier avalon_timer_qsys2 210 240 470 610 760
