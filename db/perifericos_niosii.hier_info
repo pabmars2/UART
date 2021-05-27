@@ -1,7 +1,6 @@
 |avalon_UART
 CLK => CLK.IN2
 RST => RST.IN1
-flag_tx => flagTx_aux.IN1
 flag_tx => state.DATAA
 TX <= UART:UART.TX
 RX => RX.IN1

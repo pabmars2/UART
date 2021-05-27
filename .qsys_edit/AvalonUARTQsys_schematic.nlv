@@ -4,14 +4,14 @@ preplace inst AvalonUARTQsys.avalon_timer_0 -pg 1 -lvl 3 -y 140
 preplace inst AvalonUARTQsys.clk_0 -pg 1 -lvl 1 -y 80
 preplace inst AvalonUARTQsys -pg 1 -lvl 1 -y 40 -regy -20
 preplace inst AvalonUARTQsys.AvalonMasterUART_0 -pg 1 -lvl 2 -y 80
-preplace netloc EXPORT<net_container>AvalonUARTQsys</net_container>(SLAVE)AvalonUARTQsys.avalonmasteruart_0_control_flag_tx,(SLAVE)AvalonMasterUART_0.control) 1 0 2 NJ 150 NJ
-preplace netloc POINT_TO_POINT<net_container>AvalonUARTQsys</net_container>(SLAVE)avalon_timer_0.avalon_slave,(MASTER)AvalonMasterUART_0.avalon_master) 1 2 1 710
+preplace netloc EXPORT<net_container>AvalonUARTQsys</net_container>(SLAVE)AvalonMasterUART_0.control,(SLAVE)AvalonUARTQsys.avalonmasteruart_0_control_flag_tx) 1 0 2 NJ 170 NJ
+preplace netloc POINT_TO_POINT<net_container>AvalonUARTQsys</net_container>(SLAVE)avalon_timer_0.avalon_slave,(MASTER)AvalonMasterUART_0.avalon_master) 1 2 1 730
 preplace netloc EXPORT<net_container>AvalonUARTQsys</net_container>(SLAVE)AvalonUARTQsys.avalonmasteruart_0_rs232_rx,(SLAVE)AvalonMasterUART_0.rs232_rx) 1 0 2 NJ 230 NJ
-preplace netloc FAN_OUT<net_container>AvalonUARTQsys</net_container>(MASTER)clk_0.clk,(SLAVE)avalon_timer_0.clock_sink,(SLAVE)AvalonMasterUART_0.clock) 1 1 2 450 50 730
-preplace netloc EXPORT<net_container>AvalonUARTQsys</net_container>(SLAVE)clk_0.clk_in,(SLAVE)AvalonUARTQsys.clk) 1 0 1 NJ
-preplace netloc EXPORT<net_container>AvalonUARTQsys</net_container>(SLAVE)avalon_timer_0.external_interface,(SLAVE)AvalonUARTQsys.avalon_timer_0_external_interface) 1 0 3 NJ 70 NJ 30 NJ
+preplace netloc FAN_OUT<net_container>AvalonUARTQsys</net_container>(MASTER)clk_0.clk,(SLAVE)avalon_timer_0.clock_sink,(SLAVE)AvalonMasterUART_0.clock) 1 1 2 470 30 750
 preplace netloc EXPORT<net_container>AvalonUARTQsys</net_container>(SLAVE)AvalonMasterUART_0.rs232_tx,(SLAVE)AvalonUARTQsys.avalonmasteruart_0_rs232_tx) 1 0 2 NJ 250 NJ
-preplace netloc EXPORT<net_container>AvalonUARTQsys</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)AvalonUARTQsys.reset) 1 0 1 NJ
-preplace netloc FAN_OUT<net_container>AvalonUARTQsys</net_container>(SLAVE)AvalonMasterUART_0.reset,(MASTER)clk_0.clk_reset,(SLAVE)avalon_timer_0.reset_sink) 1 1 2 430 70 690
+preplace netloc EXPORT<net_container>AvalonUARTQsys</net_container>(SLAVE)AvalonUARTQsys.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+preplace netloc EXPORT<net_container>AvalonUARTQsys</net_container>(SLAVE)AvalonUARTQsys.avalon_timer_0_external_interface,(SLAVE)avalon_timer_0.external_interface) 1 0 3 NJ 150 NJ 70 NJ
+preplace netloc EXPORT<net_container>AvalonUARTQsys</net_container>(SLAVE)AvalonUARTQsys.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>AvalonUARTQsys</net_container>(SLAVE)avalon_timer_0.reset_sink,(MASTER)clk_0.clk_reset,(SLAVE)AvalonMasterUART_0.reset) 1 1 2 450 50 710
 levelinfo -pg 1 0 200 940
 levelinfo -hier AvalonUARTQsys 210 240 520 780 930
