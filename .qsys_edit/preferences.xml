@@ -9,7 +9,7 @@
    <export preferredWidth="304" />
   </columns>
  </systemtable>
- <library expandedCategories="Project/myAvalonIPs,Library,Project" />
+ <library expandedCategories="Project,Library,Project/myAvalonIPs" />
  <window width="1920" height="1030" x="0" y="0" />
  <generation
    synthesis="NONE"
