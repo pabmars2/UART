@@ -1,12 +1,12 @@
-Fitter Status : Successful - Sat May 29 14:27:08 2021
+Fitter Status : Successful - Wed Jun 02 16:53:01 2021
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : perifericos_niosii
 Top-level Entity Name : avalon_UART
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 204 / 114,480 ( < 1 % )
-    Total combinational functions : 200 / 114,480 ( < 1 % )
+Total logic elements : 206 / 114,480 ( < 1 % )
+    Total combinational functions : 198 / 114,480 ( < 1 % )
     Dedicated logic registers : 116 / 114,480 ( < 1 % )
 Total registers : 116
 Total pins : 107 / 529 ( 20 % )

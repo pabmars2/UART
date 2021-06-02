@@ -1,5 +1,5 @@
 Analysis & Synthesis report for perifericos_niosii
-Sat May 29 14:26:46 2021
+Wed Jun 02 16:52:35 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -54,13 +54,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat May 29 14:26:46 2021       ;
+; Analysis & Synthesis Status        ; Successful - Wed Jun 02 16:52:35 2021       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; perifericos_niosii                          ;
 ; Top-level Entity Name              ; avalon_UART                                 ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 243                                         ;
-;     Total combinational functions  ; 200                                         ;
+; Total logic elements               ; 241                                         ;
+;     Total combinational functions  ; 198                                         ;
 ;     Dedicated logic registers      ; 116                                         ;
 ; Total registers                    ; 116                                         ;
 ; Total pins                         ; 107                                         ;
@@ -192,16 +192,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 243       ;
+; Estimated Total logic elements              ; 241       ;
 ;                                             ;           ;
-; Total combinational functions               ; 200       ;
+; Total combinational functions               ; 198       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 98        ;
-;     -- 3 input functions                    ; 39        ;
-;     -- <=2 input functions                  ; 63        ;
+;     -- 4 input functions                    ; 130       ;
+;     -- 3 input functions                    ; 36        ;
+;     -- <=2 input functions                  ; 32        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 181       ;
+;     -- normal mode                          ; 179       ;
 ;     -- arithmetic mode                      ; 19        ;
 ;                                             ;           ;
 ; Total registers                             ; 116       ;
@@ -214,8 +214,8 @@ refer to the applicable agreement for further details.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; CLK~input ;
 ; Maximum fan-out                             ; 116       ;
-; Total fan-out                               ; 1107      ;
-; Average fan-out                             ; 2.09      ;
+; Total fan-out                               ; 1164      ;
+; Average fan-out                             ; 2.20      ;
 +---------------------------------------------+-----------+
 
 
@@ -224,11 +224,11 @@ refer to the applicable agreement for further details.
 +----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+------------------+--------------+
 ; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                         ; Entity Name      ; Library Name ;
 +----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+------------------+--------------+
-; |avalon_UART                     ; 200 (11)            ; 116 (5)                   ; 0           ; 0            ; 0       ; 0         ; 107  ; 0            ; |avalon_UART                                ; avalon_UART      ; work         ;
-;    |UART:UART|                   ; 143 (48)            ; 109 (57)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avalon_UART|UART:UART                      ; UART             ; work         ;
-;       |uart_rx:UART_RX_INST|     ; 56 (56)             ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avalon_UART|UART:UART|uart_rx:UART_RX_INST ; uart_rx          ; work         ;
+; |avalon_UART                     ; 198 (12)            ; 116 (5)                   ; 0           ; 0            ; 0       ; 0         ; 107  ; 0            ; |avalon_UART                                ; avalon_UART      ; work         ;
+;    |UART:UART|                   ; 142 (48)            ; 109 (57)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avalon_UART|UART:UART                      ; UART             ; work         ;
+;       |uart_rx:UART_RX_INST|     ; 55 (55)             ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avalon_UART|UART:UART|uart_rx:UART_RX_INST ; uart_rx          ; work         ;
 ;       |uart_tx:UART_TX_INST|     ; 39 (39)             ; 25 (25)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avalon_UART|UART:UART|uart_tx:UART_TX_INST ; uart_tx          ; work         ;
-;    |avalon_mm_master:masterUART| ; 46 (46)             ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avalon_UART|avalon_mm_master:masterUART    ; avalon_mm_master ; work         ;
+;    |avalon_mm_master:masterUART| ; 44 (44)             ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avalon_UART|avalon_mm_master:masterUART    ; avalon_mm_master ; work         ;
 +----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -256,9 +256,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Register name                         ; Reason for Removal        ; Registers Removed due to This Register        ;
 +---------------------------------------+---------------------------+-----------------------------------------------+
 ; avalon_mm_master:masterUART|state[31] ; Stuck at GND              ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[3],  ;
-;                                       ; due to stuck port data_in ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[4],  ;
-;                                       ;                           ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[5],  ;
-;                                       ;                           ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[6],  ;
+;                                       ; due to stuck port data_in ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[6],  ;
 ;                                       ;                           ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[7],  ;
 ;                                       ;                           ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[8],  ;
 ;                                       ;                           ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[9],  ;
@@ -284,6 +282,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;                                       ;                           ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[29], ;
 ;                                       ;                           ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[30], ;
 ;                                       ;                           ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[31]  ;
+; state[31]                             ; Stuck at GND              ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[4],  ;
+;                                       ; due to stuck port data_in ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[5]   ;
 +---------------------------------------+---------------------------+-----------------------------------------------+
 
 
@@ -318,20 +318,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |avalon_UART|UART:UART|data_to_recieve[4][0]                 ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |avalon_UART|UART:UART|data_to_recieve[4][1]                 ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |avalon_UART|UART:UART|data_to_recieve[3][0]                 ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |avalon_UART|UART:UART|data_to_recieve[2][7]                 ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |avalon_UART|UART:UART|data_to_recieve[1][0]                 ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |avalon_UART|UART:UART|data_to_recieve[0][5]                 ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |avalon_UART|UART:UART|data_to_recieve[2][2]                 ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |avalon_UART|UART:UART|data_to_recieve[1][1]                 ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |avalon_UART|UART:UART|data_to_recieve[0][0]                 ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |avalon_UART|UART:UART|indexCount[3]                         ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |avalon_UART|UART:UART|uart_tx:UART_TX_INST|r_Clock_Count[0] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |avalon_UART|UART:UART|data_tx_aux[7]                        ;
-; 7:1                ; 9 bits    ; 36 LEs        ; 9 LEs                ; 27 LEs                 ; Yes        ; |avalon_UART|UART:UART|uart_rx:UART_RX_INST|r_Clock_Count[4] ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |avalon_UART|avalon_mm_master:masterUART|WRITEDATA[25]       ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |avalon_UART|UART:UART|uart_tx:UART_TX_INST|r_Clock_Count[1] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |avalon_UART|UART:UART|data_tx_aux[6]                        ;
+; 7:1                ; 9 bits    ; 36 LEs        ; 9 LEs                ; 27 LEs                 ; Yes        ; |avalon_UART|UART:UART|uart_rx:UART_RX_INST|r_Clock_Count[8] ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |avalon_UART|UART:UART|uart_tx:UART_TX_INST|r_Bit_Index      ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |avalon_UART|UART:UART|uart_rx:UART_RX_INST|r_Bit_Index      ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |avalon_UART|data_to_write[0]                                ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |avalon_UART|avalon_mm_master:masterUART|ADDRESS[3]          ;
+; 6:1                ; 32 bits   ; 128 LEs       ; 32 LEs               ; 96 LEs                 ; No         ; |avalon_UART|avalon_mm_master:masterUART|WRITEDATA[19]       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
 
 
@@ -416,19 +415,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SCLR          ; 18                          ;
 ;     SCLR              ; 4                           ;
 ;     plain             ; 37                          ;
-; cycloneiii_lcell_comb ; 201                         ;
+; cycloneiii_lcell_comb ; 199                         ;
 ;     arith             ; 19                          ;
 ;         2 data inputs ; 18                          ;
 ;         3 data inputs ; 1                           ;
-;     normal            ; 182                         ;
+;     normal            ; 180                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 4                           ;
-;         2 data inputs ; 41                          ;
-;         3 data inputs ; 38                          ;
-;         4 data inputs ; 98                          ;
+;         2 data inputs ; 10                          ;
+;         3 data inputs ; 35                          ;
+;         4 data inputs ; 130                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 2.56                        ;
+; Average LUT depth     ; 2.44                        ;
 +-----------------------+-----------------------------+
 
 
@@ -447,7 +446,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Sat May 29 14:26:30 2021
+    Info: Processing started: Wed Jun 02 16:52:20 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off perifericos_niosii -c perifericos_niosii
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -511,15 +510,15 @@ Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/Pablo/Desktop/TFG/CHS/UART/output_files/perifericos_niosii.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 355 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 353 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 37 input pins
     Info (21059): Implemented 70 output pins
-    Info (21061): Implemented 248 logic cells
+    Info (21061): Implemented 246 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 42 warnings
-    Info: Peak virtual memory: 4763 megabytes
-    Info: Processing ended: Sat May 29 14:26:46 2021
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:35
+    Info: Peak virtual memory: 4764 megabytes
+    Info: Processing ended: Wed Jun 02 16:52:35 2021
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:36
 
 
 +------------------------------------------+

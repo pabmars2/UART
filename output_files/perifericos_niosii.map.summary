@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Sat May 29 14:26:46 2021
+Analysis & Synthesis Status : Successful - Wed Jun 02 16:52:35 2021
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : perifericos_niosii
 Top-level Entity Name : avalon_UART
 Family : Cyclone IV E
-Total logic elements : 243
-    Total combinational functions : 200
+Total logic elements : 241
+    Total combinational functions : 198
     Dedicated logic registers : 116
 Total registers : 116
 Total pins : 107

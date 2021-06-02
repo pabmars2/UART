@@ -1,12 +1,12 @@
-# system info AvalonUARTQsys_tb on 2021.05.29.14:35:21
+# system info AvalonUARTQsys_tb on 2021.06.02.16:54:42
 system_info:
 name,value
 DEVICE,EP4CE115F29C7
 DEVICE_FAMILY,Cyclone IV E
-GENERATION_ID,1622291717
+GENERATION_ID,1622645677
 #
 #
-# Files generated for AvalonUARTQsys_tb on 2021.05.29.14:35:21
+# Files generated for AvalonUARTQsys_tb on 2021.06.02.16:54:42
 files:
 filepath,kind,attributes,module,is_top
 AvalonUARTQsys/testbench/AvalonUARTQsys_tb/simulation/AvalonUARTQsys_tb.v,VERILOG,,AvalonUARTQsys_tb,true
