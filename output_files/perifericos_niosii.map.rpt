@@ -1,5 +1,5 @@
 Analysis & Synthesis report for perifericos_niosii
-Wed Jun 02 16:52:35 2021
+Fri Jul 02 09:29:57 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -54,13 +54,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jun 02 16:52:35 2021       ;
+; Analysis & Synthesis Status        ; Successful - Fri Jul 02 09:29:57 2021       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; perifericos_niosii                          ;
 ; Top-level Entity Name              ; avalon_UART                                 ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 241                                         ;
-;     Total combinational functions  ; 198                                         ;
+; Total logic elements               ; 243                                         ;
+;     Total combinational functions  ; 200                                         ;
 ;     Dedicated logic registers      ; 116                                         ;
 ; Total registers                    ; 116                                         ;
 ; Total pins                         ; 107                                         ;
@@ -162,29 +162,29 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processors 2-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                            ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------+---------+
-; avalon_mm_master.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_mm_master.sv ;         ;
-; UART.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/CHS/UART/UART.sv             ;         ;
-; uart_rx.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/CHS/UART/uart_rx.sv          ;         ;
-; uart_tx.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/CHS/UART/uart_tx.sv          ;         ;
-; avalon_UART.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv      ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                           ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                       ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------+---------+
+; avalon_mm_master.sv              ; yes             ; User SystemVerilog HDL File  ; F:/Datos/Doumentos/GitHub/UART/avalon_mm_master.sv ;         ;
+; UART.sv                          ; yes             ; User SystemVerilog HDL File  ; F:/Datos/Doumentos/GitHub/UART/UART.sv             ;         ;
+; uart_rx.sv                       ; yes             ; User SystemVerilog HDL File  ; F:/Datos/Doumentos/GitHub/UART/uart_rx.sv          ;         ;
+; uart_tx.sv                       ; yes             ; User SystemVerilog HDL File  ; F:/Datos/Doumentos/GitHub/UART/uart_tx.sv          ;         ;
+; avalon_UART.sv                   ; yes             ; User SystemVerilog HDL File  ; F:/Datos/Doumentos/GitHub/UART/avalon_UART.sv      ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -192,16 +192,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 241       ;
+; Estimated Total logic elements              ; 243       ;
 ;                                             ;           ;
-; Total combinational functions               ; 198       ;
+; Total combinational functions               ; 200       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 130       ;
-;     -- 3 input functions                    ; 36        ;
-;     -- <=2 input functions                  ; 32        ;
+;     -- 4 input functions                    ; 127       ;
+;     -- 3 input functions                    ; 42        ;
+;     -- <=2 input functions                  ; 31        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 179       ;
+;     -- normal mode                          ; 181       ;
 ;     -- arithmetic mode                      ; 19        ;
 ;                                             ;           ;
 ; Total registers                             ; 116       ;
@@ -214,8 +214,8 @@ refer to the applicable agreement for further details.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; CLK~input ;
 ; Maximum fan-out                             ; 116       ;
-; Total fan-out                               ; 1164      ;
-; Average fan-out                             ; 2.20      ;
+; Total fan-out                               ; 1169      ;
+; Average fan-out                             ; 2.21      ;
 +---------------------------------------------+-----------+
 
 
@@ -224,11 +224,11 @@ refer to the applicable agreement for further details.
 +----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+------------------+--------------+
 ; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                         ; Entity Name      ; Library Name ;
 +----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+------------------+--------------+
-; |avalon_UART                     ; 198 (12)            ; 116 (5)                   ; 0           ; 0            ; 0       ; 0         ; 107  ; 0            ; |avalon_UART                                ; avalon_UART      ; work         ;
-;    |UART:UART|                   ; 142 (48)            ; 109 (57)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avalon_UART|UART:UART                      ; UART             ; work         ;
-;       |uart_rx:UART_RX_INST|     ; 55 (55)             ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avalon_UART|UART:UART|uart_rx:UART_RX_INST ; uart_rx          ; work         ;
+; |avalon_UART                     ; 200 (10)            ; 116 (5)                   ; 0           ; 0            ; 0       ; 0         ; 107  ; 0            ; |avalon_UART                                ; avalon_UART      ; work         ;
+;    |UART:UART|                   ; 144 (48)            ; 109 (57)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avalon_UART|UART:UART                      ; UART             ; work         ;
+;       |uart_rx:UART_RX_INST|     ; 57 (57)             ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avalon_UART|UART:UART|uart_rx:UART_RX_INST ; uart_rx          ; work         ;
 ;       |uart_tx:UART_TX_INST|     ; 39 (39)             ; 25 (25)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avalon_UART|UART:UART|uart_tx:UART_TX_INST ; uart_tx          ; work         ;
-;    |avalon_mm_master:masterUART| ; 44 (44)             ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avalon_UART|avalon_mm_master:masterUART    ; avalon_mm_master ; work         ;
+;    |avalon_mm_master:masterUART| ; 46 (46)             ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |avalon_UART|avalon_mm_master:masterUART    ; avalon_mm_master ; work         ;
 +----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -255,9 +255,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------+---------------------------+-----------------------------------------------+
 ; Register name                         ; Reason for Removal        ; Registers Removed due to This Register        ;
 +---------------------------------------+---------------------------+-----------------------------------------------+
-; avalon_mm_master:masterUART|state[31] ; Stuck at GND              ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[3],  ;
-;                                       ; due to stuck port data_in ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[6],  ;
-;                                       ;                           ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[7],  ;
+; avalon_mm_master:masterUART|state[31] ; Stuck at GND              ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[4],  ;
+;                                       ; due to stuck port data_in ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[5],  ;
 ;                                       ;                           ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[8],  ;
 ;                                       ;                           ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[9],  ;
 ;                                       ;                           ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[10], ;
@@ -282,8 +281,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;                                       ;                           ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[29], ;
 ;                                       ;                           ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[30], ;
 ;                                       ;                           ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[31]  ;
-; state[31]                             ; Stuck at GND              ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[4],  ;
-;                                       ; due to stuck port data_in ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[5]   ;
+; state[31]                             ; Stuck at GND              ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[6],  ;
+;                                       ; due to stuck port data_in ; UART:UART|uart_tx:UART_TX_INST|r_SM_Main[7]   ;
 +---------------------------------------+---------------------------+-----------------------------------------------+
 
 
@@ -318,19 +317,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |avalon_UART|UART:UART|data_to_recieve[4][1]                 ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |avalon_UART|UART:UART|data_to_recieve[3][0]                 ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |avalon_UART|UART:UART|data_to_recieve[2][2]                 ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |avalon_UART|UART:UART|data_to_recieve[1][1]                 ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |avalon_UART|UART:UART|data_to_recieve[0][0]                 ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |avalon_UART|UART:UART|data_to_recieve[4][0]                 ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |avalon_UART|UART:UART|data_to_recieve[3][4]                 ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |avalon_UART|UART:UART|data_to_recieve[2][3]                 ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |avalon_UART|UART:UART|data_to_recieve[1][6]                 ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |avalon_UART|UART:UART|data_to_recieve[0][7]                 ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |avalon_UART|UART:UART|indexCount[3]                         ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |avalon_UART|UART:UART|uart_tx:UART_TX_INST|r_Clock_Count[1] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |avalon_UART|UART:UART|data_tx_aux[6]                        ;
-; 7:1                ; 9 bits    ; 36 LEs        ; 9 LEs                ; 27 LEs                 ; Yes        ; |avalon_UART|UART:UART|uart_rx:UART_RX_INST|r_Clock_Count[8] ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |avalon_UART|UART:UART|uart_tx:UART_TX_INST|r_Clock_Count[0] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |avalon_UART|UART:UART|data_tx_aux[4]                        ;
+; 7:1                ; 9 bits    ; 36 LEs        ; 9 LEs                ; 27 LEs                 ; Yes        ; |avalon_UART|UART:UART|uart_rx:UART_RX_INST|r_Clock_Count[6] ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |avalon_UART|UART:UART|uart_tx:UART_TX_INST|r_Bit_Index      ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |avalon_UART|UART:UART|uart_rx:UART_RX_INST|r_Bit_Index      ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |avalon_UART|avalon_mm_master:masterUART|ADDRESS[3]          ;
-; 6:1                ; 32 bits   ; 128 LEs       ; 32 LEs               ; 96 LEs                 ; No         ; |avalon_UART|avalon_mm_master:masterUART|WRITEDATA[19]       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |avalon_UART|avalon_mm_master:masterUART|ADDRESS[2]          ;
+; 6:1                ; 32 bits   ; 128 LEs       ; 32 LEs               ; 96 LEs                 ; No         ; |avalon_UART|avalon_mm_master:masterUART|WRITEDATA[21]       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
 
 
@@ -389,7 +388,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------------------+-------+----------+--------------+
 ; Port                     ; Type  ; Severity ; Details      ;
 +--------------------------+-------+----------+--------------+
-; address_to_access[31..4] ; Input ; Info     ; Stuck at GND ;
+; address_to_access[31..5] ; Input ; Info     ; Stuck at GND ;
 ; address_to_access[1..0]  ; Input ; Info     ; Stuck at GND ;
 +--------------------------+-------+----------+--------------+
 
@@ -415,19 +414,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SCLR          ; 18                          ;
 ;     SCLR              ; 4                           ;
 ;     plain             ; 37                          ;
-; cycloneiii_lcell_comb ; 199                         ;
+; cycloneiii_lcell_comb ; 201                         ;
 ;     arith             ; 19                          ;
 ;         2 data inputs ; 18                          ;
 ;         3 data inputs ; 1                           ;
-;     normal            ; 180                         ;
+;     normal            ; 182                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 4                           ;
-;         2 data inputs ; 10                          ;
-;         3 data inputs ; 35                          ;
-;         4 data inputs ; 130                         ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 41                          ;
+;         4 data inputs ; 127                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 2.44                        ;
+; Average LUT depth     ; 2.58                        ;
 +-----------------------+-----------------------------+
 
 
@@ -446,84 +445,83 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Jun 02 16:52:20 2021
+    Info: Processing started: Fri Jul 02 09:29:43 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off perifericos_niosii -c perifericos_niosii
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file avalon_mm_master.sv
-    Info (12023): Found entity 1: avalon_mm_master File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_mm_master.sv Line: 9
+    Info (12023): Found entity 1: avalon_mm_master File: F:/Datos/Doumentos/GitHub/UART/avalon_mm_master.sv Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file uart.sv
-    Info (12023): Found entity 1: UART File: C:/Users/Pablo/Desktop/TFG/CHS/UART/UART.sv Line: 1
+    Info (12023): Found entity 1: UART File: F:/Datos/Doumentos/GitHub/UART/UART.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file uart_rx.sv
-    Info (12023): Found entity 1: uart_rx File: C:/Users/Pablo/Desktop/TFG/CHS/UART/uart_rx.sv Line: 14
+    Info (12023): Found entity 1: uart_rx File: F:/Datos/Doumentos/GitHub/UART/uart_rx.sv Line: 14
 Info (12021): Found 1 design units, including 1 entities, in source file uart_tx.sv
-    Info (12023): Found entity 1: uart_tx File: C:/Users/Pablo/Desktop/TFG/CHS/UART/uart_tx.sv Line: 14
+    Info (12023): Found entity 1: uart_tx File: F:/Datos/Doumentos/GitHub/UART/uart_tx.sv Line: 14
 Info (12021): Found 1 design units, including 1 entities, in source file avalon_uart.sv
-    Info (12023): Found entity 1: avalon_UART File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 1
+    Info (12023): Found entity 1: avalon_UART File: F:/Datos/Doumentos/GitHub/UART/avalon_UART.sv Line: 1
 Info (12127): Elaborating entity "avalon_UART" for the top level hierarchy
-Info (12128): Elaborating entity "UART" for hierarchy "UART:UART" File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 54
-Warning (10230): Verilog HDL assignment warning at UART.sv(89): truncated value with size 32 to match size of target (4) File: C:/Users/Pablo/Desktop/TFG/CHS/UART/UART.sv Line: 89
-Warning (10230): Verilog HDL assignment warning at UART.sv(171): truncated value with size 32 to match size of target (4) File: C:/Users/Pablo/Desktop/TFG/CHS/UART/UART.sv Line: 171
-Info (12128): Elaborating entity "uart_rx" for hierarchy "UART:UART|uart_rx:UART_RX_INST" File: C:/Users/Pablo/Desktop/TFG/CHS/UART/UART.sv Line: 42
-Warning (10230): Verilog HDL assignment warning at uart_rx.sv(75): truncated value with size 32 to match size of target (9) File: C:/Users/Pablo/Desktop/TFG/CHS/UART/uart_rx.sv Line: 75
-Warning (10230): Verilog HDL assignment warning at uart_rx.sv(86): truncated value with size 32 to match size of target (9) File: C:/Users/Pablo/Desktop/TFG/CHS/UART/uart_rx.sv Line: 86
-Warning (10230): Verilog HDL assignment warning at uart_rx.sv(97): truncated value with size 32 to match size of target (4) File: C:/Users/Pablo/Desktop/TFG/CHS/UART/uart_rx.sv Line: 97
-Warning (10230): Verilog HDL assignment warning at uart_rx.sv(115): truncated value with size 32 to match size of target (9) File: C:/Users/Pablo/Desktop/TFG/CHS/UART/uart_rx.sv Line: 115
-Info (12128): Elaborating entity "uart_tx" for hierarchy "UART:UART|uart_tx:UART_TX_INST" File: C:/Users/Pablo/Desktop/TFG/CHS/UART/UART.sv Line: 51
-Warning (10230): Verilog HDL assignment warning at uart_tx.sv(62): truncated value with size 32 to match size of target (9) File: C:/Users/Pablo/Desktop/TFG/CHS/UART/uart_tx.sv Line: 62
-Warning (10230): Verilog HDL assignment warning at uart_tx.sv(81): truncated value with size 32 to match size of target (9) File: C:/Users/Pablo/Desktop/TFG/CHS/UART/uart_tx.sv Line: 81
-Warning (10230): Verilog HDL assignment warning at uart_tx.sv(91): truncated value with size 32 to match size of target (3) File: C:/Users/Pablo/Desktop/TFG/CHS/UART/uart_tx.sv Line: 91
-Warning (10230): Verilog HDL assignment warning at uart_tx.sv(111): truncated value with size 32 to match size of target (9) File: C:/Users/Pablo/Desktop/TFG/CHS/UART/uart_tx.sv Line: 111
-Info (12128): Elaborating entity "avalon_mm_master" for hierarchy "avalon_mm_master:masterUART" File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 74
+Info (12128): Elaborating entity "UART" for hierarchy "UART:UART" File: F:/Datos/Doumentos/GitHub/UART/avalon_UART.sv Line: 54
+Warning (10230): Verilog HDL assignment warning at UART.sv(89): truncated value with size 32 to match size of target (4) File: F:/Datos/Doumentos/GitHub/UART/UART.sv Line: 89
+Warning (10230): Verilog HDL assignment warning at UART.sv(171): truncated value with size 32 to match size of target (4) File: F:/Datos/Doumentos/GitHub/UART/UART.sv Line: 171
+Info (12128): Elaborating entity "uart_rx" for hierarchy "UART:UART|uart_rx:UART_RX_INST" File: F:/Datos/Doumentos/GitHub/UART/UART.sv Line: 42
+Warning (10230): Verilog HDL assignment warning at uart_rx.sv(75): truncated value with size 32 to match size of target (9) File: F:/Datos/Doumentos/GitHub/UART/uart_rx.sv Line: 75
+Warning (10230): Verilog HDL assignment warning at uart_rx.sv(86): truncated value with size 32 to match size of target (9) File: F:/Datos/Doumentos/GitHub/UART/uart_rx.sv Line: 86
+Warning (10230): Verilog HDL assignment warning at uart_rx.sv(97): truncated value with size 32 to match size of target (4) File: F:/Datos/Doumentos/GitHub/UART/uart_rx.sv Line: 97
+Warning (10230): Verilog HDL assignment warning at uart_rx.sv(115): truncated value with size 32 to match size of target (9) File: F:/Datos/Doumentos/GitHub/UART/uart_rx.sv Line: 115
+Info (12128): Elaborating entity "uart_tx" for hierarchy "UART:UART|uart_tx:UART_TX_INST" File: F:/Datos/Doumentos/GitHub/UART/UART.sv Line: 51
+Warning (10230): Verilog HDL assignment warning at uart_tx.sv(62): truncated value with size 32 to match size of target (9) File: F:/Datos/Doumentos/GitHub/UART/uart_tx.sv Line: 62
+Warning (10230): Verilog HDL assignment warning at uart_tx.sv(81): truncated value with size 32 to match size of target (9) File: F:/Datos/Doumentos/GitHub/UART/uart_tx.sv Line: 81
+Warning (10230): Verilog HDL assignment warning at uart_tx.sv(91): truncated value with size 32 to match size of target (3) File: F:/Datos/Doumentos/GitHub/UART/uart_tx.sv Line: 91
+Warning (10230): Verilog HDL assignment warning at uart_tx.sv(111): truncated value with size 32 to match size of target (9) File: F:/Datos/Doumentos/GitHub/UART/uart_tx.sv Line: 111
+Info (12128): Elaborating entity "avalon_mm_master" for hierarchy "avalon_mm_master:masterUART" File: F:/Datos/Doumentos/GitHub/UART/avalon_UART.sv Line: 74
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "ADDRESS[0]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
-    Warning (13410): Pin "ADDRESS[1]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
-    Warning (13410): Pin "ADDRESS[4]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
-    Warning (13410): Pin "ADDRESS[5]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
-    Warning (13410): Pin "ADDRESS[6]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
-    Warning (13410): Pin "ADDRESS[7]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
-    Warning (13410): Pin "ADDRESS[8]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
-    Warning (13410): Pin "ADDRESS[9]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
-    Warning (13410): Pin "ADDRESS[10]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
-    Warning (13410): Pin "ADDRESS[11]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
-    Warning (13410): Pin "ADDRESS[12]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
-    Warning (13410): Pin "ADDRESS[13]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
-    Warning (13410): Pin "ADDRESS[14]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
-    Warning (13410): Pin "ADDRESS[15]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
-    Warning (13410): Pin "ADDRESS[16]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
-    Warning (13410): Pin "ADDRESS[17]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
-    Warning (13410): Pin "ADDRESS[18]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
-    Warning (13410): Pin "ADDRESS[19]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
-    Warning (13410): Pin "ADDRESS[20]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
-    Warning (13410): Pin "ADDRESS[21]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
-    Warning (13410): Pin "ADDRESS[22]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
-    Warning (13410): Pin "ADDRESS[23]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
-    Warning (13410): Pin "ADDRESS[24]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
-    Warning (13410): Pin "ADDRESS[25]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
-    Warning (13410): Pin "ADDRESS[26]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
-    Warning (13410): Pin "ADDRESS[27]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
-    Warning (13410): Pin "ADDRESS[28]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
-    Warning (13410): Pin "ADDRESS[29]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
-    Warning (13410): Pin "ADDRESS[30]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
-    Warning (13410): Pin "ADDRESS[31]" is stuck at GND File: C:/Users/Pablo/Desktop/TFG/CHS/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[0]" is stuck at GND File: F:/Datos/Doumentos/GitHub/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[1]" is stuck at GND File: F:/Datos/Doumentos/GitHub/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[5]" is stuck at GND File: F:/Datos/Doumentos/GitHub/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[6]" is stuck at GND File: F:/Datos/Doumentos/GitHub/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[7]" is stuck at GND File: F:/Datos/Doumentos/GitHub/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[8]" is stuck at GND File: F:/Datos/Doumentos/GitHub/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[9]" is stuck at GND File: F:/Datos/Doumentos/GitHub/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[10]" is stuck at GND File: F:/Datos/Doumentos/GitHub/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[11]" is stuck at GND File: F:/Datos/Doumentos/GitHub/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[12]" is stuck at GND File: F:/Datos/Doumentos/GitHub/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[13]" is stuck at GND File: F:/Datos/Doumentos/GitHub/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[14]" is stuck at GND File: F:/Datos/Doumentos/GitHub/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[15]" is stuck at GND File: F:/Datos/Doumentos/GitHub/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[16]" is stuck at GND File: F:/Datos/Doumentos/GitHub/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[17]" is stuck at GND File: F:/Datos/Doumentos/GitHub/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[18]" is stuck at GND File: F:/Datos/Doumentos/GitHub/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[19]" is stuck at GND File: F:/Datos/Doumentos/GitHub/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[20]" is stuck at GND File: F:/Datos/Doumentos/GitHub/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[21]" is stuck at GND File: F:/Datos/Doumentos/GitHub/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[22]" is stuck at GND File: F:/Datos/Doumentos/GitHub/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[23]" is stuck at GND File: F:/Datos/Doumentos/GitHub/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[24]" is stuck at GND File: F:/Datos/Doumentos/GitHub/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[25]" is stuck at GND File: F:/Datos/Doumentos/GitHub/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[26]" is stuck at GND File: F:/Datos/Doumentos/GitHub/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[27]" is stuck at GND File: F:/Datos/Doumentos/GitHub/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[28]" is stuck at GND File: F:/Datos/Doumentos/GitHub/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[29]" is stuck at GND File: F:/Datos/Doumentos/GitHub/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[30]" is stuck at GND File: F:/Datos/Doumentos/GitHub/UART/avalon_UART.sv Line: 20
+    Warning (13410): Pin "ADDRESS[31]" is stuck at GND File: F:/Datos/Doumentos/GitHub/UART/avalon_UART.sv Line: 20
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file C:/Users/Pablo/Desktop/TFG/CHS/UART/output_files/perifericos_niosii.map.smsg
+Info (144001): Generated suppressed messages file F:/Datos/Doumentos/GitHub/UART/output_files/perifericos_niosii.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 353 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 355 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 37 input pins
     Info (21059): Implemented 70 output pins
-    Info (21061): Implemented 246 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 42 warnings
-    Info: Peak virtual memory: 4764 megabytes
-    Info: Processing ended: Wed Jun 02 16:52:35 2021
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:36
+    Info (21061): Implemented 248 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 41 warnings
+    Info: Peak virtual memory: 4822 megabytes
+    Info: Processing ended: Fri Jul 02 09:29:57 2021
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:25
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/Pablo/Desktop/TFG/CHS/UART/output_files/perifericos_niosii.map.smsg.
+The suppressed messages can be found in F:/Datos/Doumentos/GitHub/UART/output_files/perifericos_niosii.map.smsg.
 
 

@@ -16,6 +16,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "ADDRESS[4]",
+					"strict" : false
+				},
+				{
 					"name" : "WRITEDATA[0]",
 					"strict" : false
 				},
@@ -172,11 +176,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "flag_tx",
+					"name" : "WAITREQUEST",
 					"strict" : false
 				},
 				{
-					"name" : "WAITREQUEST",
+					"name" : "flag_tx",
 					"strict" : false
 				},
 				{
