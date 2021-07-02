@@ -96,7 +96,7 @@
  <module
    name="AvalonMasterUART_0"
    kind="AvalonMasterUART"
-   version="4.6"
+   version="5.0"
    enabled="1">
   <parameter name="c_CLKS_PER_BIT" value="434" />
  </module>
